@@ -6,9 +6,6 @@ body, html {
 }
 
 body {
-  display: flex;
-  flex-flow: row wrap;
-  flex: 1 100%;
   font-family: Roboto;
   font-size: 12px;
   color: #424242;
@@ -32,21 +29,19 @@ ul {
   margin: 0;
 }
 
-
-
 .header {
   min-height: 56px;
   transition: min-height 0.3s;
 }
 
-.header__inner {
+.header_inner {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   white-space: nowrap;
 }
 
-.header__logo {
+.header_logo {
   height: 72px;
   order: 1;
   display: block;
@@ -57,7 +52,7 @@ ul {
   height: auto;
 }
 
-.header__title {
+.header_title {
   font-weight: 300;
   font-size: 1em;
   order: 2;
@@ -102,7 +97,7 @@ ul {
   height: 60px;
   line-height: 60px;
   text-align: center;
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .featured_work_header {
@@ -114,6 +109,10 @@ ul {
 
 .featured_work_ul {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4em;
@@ -121,9 +120,10 @@ ul {
 }
 
 .featured_work_li {
-
-    width: 100%;
-    padding: 0.75em 1.5em 0.75em 1.5em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.75em 1.5em 0.75em 1.5em;
 }
 
 .featured_work_li_wrap {
